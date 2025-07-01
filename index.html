@@ -1,11 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Juan David Contreras Coronado" />
+  <title>Product Inventory</title>
+  <link rel="stylesheet" href="./src/css/styles.css" />
 </head>
+
 <body>
-  
+  <header>
+    <h1>Product Management</h1>
+    <nav>
+      <ul>
+        <li><a href="#add">Add</a></li>
+        <li><a href="#delete">Delete</a></li>
+        <li><a href="#update">Update</a></li>
+        <li><a href="#inventory">Inventory</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div id="form">
+      <section id="add">
+        <h2>Add Product</h2>
+        <label for="productId">Product ID:</label>
+        <input type="text" id="productId" required />
+
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" required />
+
+        <label for="productCategory">Product Category:</label>
+        <input type="text" id="productCategory" required />
+
+        <label for="productPrice">Product Price:</label>
+        <input type="number" id="productPrice" min="0" required />
+
+        <button id="addButton">Submit</button>
+      </section>
+
+      <section id="delete">
+        <h2>Delete Product</h2>
+        <label for="deleteId">ID to delete:</label>
+        <input type="text" id="deleteId" required />
+        <button id="deleteButton">Delete</button>
+      </section>
+
+      <section id="update">
+        <h2>Update Product</h2>
+        <label for="updateId">Product ID to update:</label>
+        <input type="text" id="updateId" required />
+
+        <label for="newName">New name:</label>
+        <input type="text" id="newName" />
+
+        <label for="newCategory">New category:</label>
+        <input type="text" id="newCategory" />
+
+        <label for="newPrice">New price:</label>
+        <input type="number" id="newPrice" min="0" />
+
+        <button id="updateButton">Update</button>
+      </section>
+    </div>
+
+    <section id="inventory">
+      <h2>Inventory</h2>
+      <ul id="inventoryList"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>Developed by contrerinhaz :P</p>
+  </footer>
+
+  <script src="./src/js/main.js"></script>
 </body>
+
 </html>
